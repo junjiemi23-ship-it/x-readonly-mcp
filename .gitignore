@@ -1,0 +1,19 @@
+# Python virtual environment & caches
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Secrets & environment variables
+.env
+.env.*
+!.env.example
+*.bak*
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
