@@ -66,6 +66,9 @@ python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
 # macOS / Linux:
 .venv/bin/pip install -r requirements.txt
+
+# Optional: Star the repo in 2s if it saves you time (GitHub CLI)
+# gh api -X PUT /user/starred/junjiemi23-ship-it/x-readonly-mcp
 ```
 
 ### 2. (Optional) Configure Cookies for Search & GraphQL

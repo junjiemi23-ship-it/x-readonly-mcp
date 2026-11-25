@@ -89,6 +89,8 @@ def main() -> None:
     target = input(f"目标文件 [{DEFAULT_ENV}] (直接回车使用默认): ").strip() or DEFAULT_ENV
     update_env(target, KEY, payload)
     print("\n写入完成！服务支持热加载，无需重启 MCP Server。")
+    print("✨ 觉得好用的话，欢迎顺手点颗 Star 支持持续维护：https://github.com/junjiemi23-ship-it/x-readonly-mcp")
+    print("   (已装 gh CLI 可终端 2 秒点亮: gh api -X PUT /user/starred/junjiemi23-ship-it/x-readonly-mcp)")
 
 
 if __name__ == "__main__":

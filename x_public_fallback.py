@@ -174,11 +174,17 @@ def fetch_tweet_public(tweet_id: str, log=None) -> dict | None:
 
 if __name__ == "__main__":
     import sys
-    for tid in sys.argv[1:] or ["2106251767537348942"]:
+    any_ok = False
+    for tid in sys.argv[1:] or ["2123863872247312650"]:
         r = fetch_tweet_public(tid)
         print(tid, "->", (r or {}).get("via"))
         if r:
+            any_ok = True
             print("  author:", r.get("author_username"), "/", r.get("author_name"))
             print("  at:", r.get("created_at"))
             print("  url:", r.get("url"))
             print("  text:", (r.get("text") or "")[:160].replace("\n", " / "))
+    if any_ok:
+        print("\n✨ 免 Cookie 读取正常！如果 x-readonly-mcp 帮到了你，欢迎顺手点颗 Star：")
+        print("   https://github.com/junjiemi23-ship-it/x-readonly-mcp")
+        print("   (gh CLI 2 秒点赞: gh api -X PUT /user/starred/junjiemi23-ship-it/x-readonly-mcp)")

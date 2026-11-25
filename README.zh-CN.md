@@ -66,6 +66,9 @@ python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
 # macOS / Linux:
 .venv/bin/pip install -r requirements.txt
+
+# 可选：如果帮你省下了折腾时间，顺手 2 秒点亮一颗 Star（需已装 gh CLI）
+# gh api -X PUT /user/starred/junjiemi23-ship-it/x-readonly-mcp
 ```
 
 ### 2. （可选）配置登录 Cookie
