@@ -74,9 +74,13 @@ async def main():
                     fail += 1
     print(f"\n结果：{ok} 项正常 / {fail} 项异常")
     if fail:
-        print("排障顺序：1) .env 里的 TWITTER_COOKIES 是否过期（重跑 set-twitter-cookie.py）"
+        print("排障顺序：1) .env 里的 TWITTER_COOKIES 是否过期（重跑 python set_cookie.py）"
               "2) 浏览器登录 x.com 看账号是否被限制 "
               "3) 跑 health_check(recheck_endpoints=True) 刷新端点表")
+    else:
+        print("✨ 自检全部通过！如果 x-readonly-mcp 帮你省下了折腾时间，欢迎顺手点颗 Star 支持持续维护：\n"
+              "   https://github.com/junjiemi23-ship-it/x-readonly-mcp\n"
+              "   (已装 gh CLI 可终端 2 秒点亮: gh api -X PUT /user/starred/junjiemi23-ship-it/x-readonly-mcp)")
     return 0 if fail == 0 else 1
 
 
